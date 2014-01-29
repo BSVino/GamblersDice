@@ -62,7 +62,7 @@ function setup_probs() {
 			prob = 0;
 
 		results = results + "<td class='prob' valign='bottom'><div class='pips' style='height:" + (prob * 16) + "px'></div>";
-		results = results + "<div class='prob_roll'>" + i + "<br /><em class='prob_probability'>" + Math.round(prob*100/total_prob) + "%/" + history[i] + "</em></div></td>";
+		results = results + "<div class='prob_roll'>" + i + "<br /><em class='prob_probability'>" + Math.round(prob*100/total_prob) + "%</em><br /><span class='history'>" + history[i] + "</span></div></td>";
 	}
 
 	results = results + "</tr>";
