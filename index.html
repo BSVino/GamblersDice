@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+<title>Gambler's Fallacy Dice Roller</title>
+<script src="jquery-2.1.0.min.js"></script>
+<script src="dice.js"></script>
+</head>
+<body>
+<style type="text/css"><!--
+body
+{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+font,th,td,p,h1,h2,h3,li,div,span { font-family: 'Roboto', serif; font-weight: 300; }
+
+.block {
+	margin-top: 30px;
+	text-align: center;
+}
+
+#errormsg {
+	font-size: 80%;
+	font-weight: 100;
+	color: #600;
+	font-style: italic;
+}
+
+#weightfactor_label {
+	cursor: pointer;
+}
+
+#weightfactor {
+	cursor: pointer;
+}
+
+#roll {
+	font-size: 200%;
+	cursor: pointer;
+}
+
+#roll_result {
+	font-size: 1000%;
+}
+
+#show_probs {
+	font-style: italic;
+	font-size: 70%;
+	cursor: pointer;
+}
+
+#probs {
+	margin-left: auto;
+	margin-right: auto;
+	list-style-type:none;
+	height: 200px;
+	//border: solid green 1px;
+}
+
+.pips {
+	background-image: url('pip.png');
+	background-repeat: repeat-y;
+	width: 16px;
+	//border: solid black 1px;
+	background-position: left bottom;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.prob {
+	//border: solid blue 1px;
+	width: 50px;
+	height: 250px;
+}
+
+.prob_roll {
+	//border: solid red 1px;
+}
+
+.prob_probability {
+	font-size: small;
+	font-weight: 250px;
+}
+
+--></style>
+<div style="text-align: center; font-size: 200%;">Gambler's Fallacy Dice Roller</div>
+
+<div class="block" style="font-size: small; font-style: italic;">A dice roller that respects the <a href="http://en.wikipedia.org/wiki/Gambler%27s_fallacy">Gambler's Fallacy</a>. Numbers that have been rolled recently will be less likely to roll again,<br />and numbers which have not been rolled recently will be more likely to roll.</div>
+
+<div class="block">
+	<form>
+		<input type="text" name="dice" maxlength="2" size="1" value="2" id="dice"></input>
+		d
+		<input type="text" name="sides" maxlength="2" size="1" value="6" id="sides"></input>
+	</form>
+	<span id="errormsg"></span>
+	<form style="margin-top: 10px; font-size: small;">
+		<span id="weightfactor_label">Weight factor:</span> <span id="weightfactor">1</span>
+		<input type="text" name="weightfactor" maxlength="4" size="2" value="1" id="weightfactor_input" style="display: none"></input>
+	</form>
+</div>
+
+<div class="block" id="roll">ROLL</div>
+
+<div class="block" style="height: 200px" id="roll_result"></div>
+
+<div class="block">
+	<div id="show_probs">Show probabilities</div>
+	<table id="probs"></table>
+</div>
+
+<div class="block" style="font-size: small;"><span style="font-style: italic">Written by <a href="http://vinoisnotouzo.com/">Jorge Rodriguez</a>, January 2014.</span> | <a href="about.html">About</a> | <a href="http://github.com/BSVino/GamblersDice">GitHub</a></div>
+
+</body>
+</html>
