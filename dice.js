@@ -111,6 +111,8 @@ function roll() {
 	}
 
 	$("#roll_result").html(roll);
+	$("#roll_result").hide();
+	$("#roll_result").fadeIn();
 
 	if (show_probs)
 		setup_probs();
@@ -209,6 +211,7 @@ $( document ).ready(function() {
 	$("#roll").on("click", roll);
 	$("#dice").focusout(initialize);
 	$("#sides").focusout(initialize);
+	$("#reset").on("click", initialize);
 	$("#show_probs").on("click", toggle_probabilities);
 	$("#weightfactor").on("click", show_weightfactor);
 	$("#weightfactor_label").on("click", show_weightfactor);

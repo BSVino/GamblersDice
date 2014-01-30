@@ -40,18 +40,34 @@ font,th,td,p,h1,h2,h3,li,div,span { font-family: 'Roboto', serif; font-weight: 3
 #roll {
 	font-size: 200%;
 	cursor: pointer;
+	border: solid black 1px;
+	padding: 15px;
+	width: 150px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #roll_result {
 	font-size: 1000%;
 }
 
-#show_probs {
-	font-style: italic;
+#reset {
 	font-size: 70%;
 	cursor: pointer;
 	border: solid black 1px;
 	width: 100px;
+	padding: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+}
+
+#show_probs {
+	font-size: 70%;
+	cursor: pointer;
+	border: solid black 1px;
+	width: 100px;
+	padding: 5px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -120,6 +136,8 @@ font,th,td,p,h1,h2,h3,li,div,span { font-family: 'Roboto', serif; font-weight: 3
 	<div id="show_probs">Show probabilities</div>
 	<table id="probs"></table>
 </div>
+
+<div class="block" id="reset">Reset</div>
 
 <div class="block" style="font-size: small;"><span style="font-style: italic">Written by <a href="http://vinoisnotouzo.com/">Jorge Rodriguez</a>, January 2014.</span> | <a href="about.html">About</a> | <a href="http://github.com/BSVino/GamblersDice">GitHub</a></div>
 
