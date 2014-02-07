@@ -186,11 +186,11 @@ function initialize(event) {
 	// Make a copy of the initials array to be our current probabilities array.
 	current_probs = initials.slice(0);
 
-	weight_factor = 2;
+	weight_factor = 3;
 	if (dice*sides > 12)
-		weight_factor = dice*sides * 2 / 12;
+		weight_factor = dice*sides * 3 / 12;
 	else
-		weight_factor = ((dice*sides)-4) / (12-4) + 1; // Remaps [4, 12] to [1, 2]
+		weight_factor = ((dice*sides)-4) * (2/8) + 1; // Remaps [4, 12] to [1, 3]
 
 	$("#weightfactor").html("" + weight_factor.toFixed(1));
 	$("#roll_result").html("");
